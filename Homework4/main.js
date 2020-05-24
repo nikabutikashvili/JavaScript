@@ -51,11 +51,16 @@ function pricesLessThan() {
                 preferredcars.push(cars[i]);
             }
         }
-        let result = "";
-        for (let i = 0; i < preferredcars.length; i++) {
-            result += `brand: ${preferredcars[i].brand} \ncolor: ${preferredcars[i].color} \nmodel: ${preferredcars[i].model} \nyear: ${preferredcars[i].year} \nhorsepower: ${preferredcars[i].horsepower} \nprice: ${preferredcars[i].price}\n\n`; 
+        if (preferredcars.length === 0) {
+            alert("სამწუხაროდ, ამ ფასში მანქანა ვერ მოიძებნა");
+        } else {
+            let result = "";
+            for (let i = 0; i < preferredcars.length; i++) {
+            result += `Brand: ${preferredcars[i].brand} \nModel: ${preferredcars[i].model} \nPrice: $${preferredcars[i].price}\n\n`; 
         }
         alert(result);
+        }
+        
     }
    
 }
