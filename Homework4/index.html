@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/archyedt-thin.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Cars</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <ul class="nav-bar">
+                    <li class="nav-item">მთავარი</li>
+                    <li class="nav-item">კატალოგი</li>
+                    <li class="nav-item">დიზაინი</li>
+                    <li class="nav-item">კონტაქტი</li>
+                </ul>
+            </div>
+        </header>
+        <div class="intro-input">
+            <h1>ამოირჩიეთ თქვენთვის სასურველი მანქანა</h1>
+            <form class="displayCar" action="">
+                <label for="text" class="search">გთხოვთ, შეიყვანეთ მანქანის სასურველი ფასი: </label>
+                <input type="text" name="" id="preferredPrice" class="search-btn">
+                <input type="button" onclick="pricesLessThan()" value="ძებნა" class="search-btn action">
+            </form>
+        </div>
+        <section>
+            <div class="catalog">
+                <div class="car">
+                    <button class="img-btn" id="0" onclick="details(this.id)"><img src="images/bmw.jpg" alt=""></button>
+                    <button class="buy-btn">ყიდვა</button>
+                </div>
+                <div class="car">
+                    <button class="img-btn" id="1" onclick="details(this.id)"><img src="images/mer.jpg" alt=""></button>
+                    <button class="buy-btn">ყიდვა</button>
+                </div>
+                <div class="car">
+                    <button class="img-btn" id="2" onclick="details(this.id)"><img src="images/honda.jpg" alt=""></button>
+                    <button class="buy-btn">ყიდვა</button>
+                </div>
+                <div class="car">
+                    <button class="img-btn" id="3" onclick="details(this.id)"><img src="images/corolla.jpg" alt=""></button>
+                    <button class="buy-btn">ყიდვა</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p class="foot">Geolab 2020</p>
+        </footer>
+    </div>
+   
+</body>
+</html>
