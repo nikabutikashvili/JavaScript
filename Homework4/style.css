@@ -82,6 +82,11 @@ h1 {
     color: white;
 }
 
+.statistics {
+    display: flex;
+    justify-content: center;
+}
+
 .catalog {
     display: flex;
     justify-content: center;
@@ -146,4 +151,12 @@ footer {
 }
 .foot {
     text-align: center;
+}
+
+.hide {
+    display: none;
+}
+.car-title {
+    text-align: center;
+    font-size: 1.2rem;
 }
