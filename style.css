@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url(images/bmwcover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-blend-mode: multiply;
+    height: 100vh;
+    font-family: "ArchyEDT-Thin", sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+header {
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.nav-bar {
+    display: flex;
+    justify-content: center;
+}
+.nav-item {
+    text-decoration: none;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 1s;
+}
+.nav-item:after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: white;
+    transition: 300ms;
+  }
+.nav-item:hover:after {
+    width: 100%;
+}
+h1 {
+    text-align: center;
+}
+.displayCar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.search {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.search-btn {
+    height: 2em;
+    border: 0;
+    margin: 0;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+}
+.action {
+    cursor: pointer;
+    font-family: "ArchyEDT-Thin", sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+.action:hover {
+    background-color: black;
+    color: white;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+}
+
+.catalog {
+    display: flex;
+    justify-content: center;
+}
+.car {
+    width: 20%;
+    margin-right: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0px;
+    margin: 0px;
+}
+button {
+    width: 100%;
+    color: black;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transform: scale(1);
+    transition: 1s;
+    font-family: "ArchyEDT-Thin", sans-serif;
+}
+button:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
+.img-btn {
+    height: 250px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.buy-btn {
+    background-color: transparent;
+    color: white;
+    border: 0px black solid;
+    border-radius: 3px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.buy-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.intro-input {
+    margin-top: -80px;
+    text-align: center;
+}
+footer {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.foot {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+.car-title {
+    text-align: center;
+    font-size: 1.2rem;
+}
