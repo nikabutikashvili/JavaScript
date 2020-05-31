@@ -20,42 +20,11 @@ user5 = {
 };
 
 users = [user1, user2, user3, user4, user5];
-
-function redirectToIndex() {
-    window.location.href = "index.html";
-}
-function redirectToLogin() {
-    window.location.href = "login.html";
-}
-
-// function checkUsername(){
-//     let possibleUsername = document.getElementById('password');
-//     for (let i = 0; i < users.length; i++) {
-//         if(possibleUsername === users[i].username) {
-//             return possibleUsername;
-//         } else {
-//             alert("მომხარებელი არ მოიძებნა");
-//         }
-//     }
-// }
-// function checkPasswor() {
-//     let possiblePassword = document.getElementById('password');
-//     for (let i = 0; i < users.length; i++) {
-//         if(possiblePassword === users[i].password) {
-//             alert("თქვენ წარმატებით შეხვედით სისტემაში");
-//         } else {
-//             alert("პაროლი არასწორია");
-//         }
-//     }
-// }
-
-function logOn() {
+function checkUsernameAndPassword(possibleUsername, possiblePassword) {
     let user = {
         username: '',
         password: ''
     }
-    let possibleUsername = document.getElementById("username").value;
-    let possiblePassword = document.getElementById("password").value;
     for (let i = 0; i < users.length; i++) {
         if(possibleUsername === users[i].username){
             user = users[i];
@@ -63,21 +32,25 @@ function logOn() {
     }
     if(!user.username) {
         alert("მომხმარებელი არ მოიძებნა");
-        redirectToLogin();
     } else {
         if(possiblePassword === user.password) {
             if(user.password.length < 8) {
                 alert("შეხვედით სისტემაში წარმატებით, თუმცა გთხოვთ შეცვალოთ პაროლი");
-                redicredtToIndex();
+                window.location.href = "index.html";
             } else {
                 alert("შეხვედით სისტემაში წარმატებით");
-                redicredtToIndex();
+                window.location.href = "index.html";
             }
         } else {
             alert("პაროლი არასწორია");
-            redirectToLogin();
         }
     }
+}
+
+function logOn() {
+    let possibleUsername = document.getElementById("username").value;
+    let possiblePassword = document.getElementById("password").value;
+    checkUsernameAndPassword(possibleUsername, possiblePassword);
 }
 
 let showPasswordButton = document.querySelector('#showPasswordButton');
