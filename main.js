@@ -53,11 +53,19 @@ function averagePrice() {
     alert("ჩვენს საიტზე არსებული მანქანების საშუალო ღირებულება არის: " + averagePrice);
 }
 
+function reset() {
+    for (let i = 0; i < cars.length; i++) {
+        let car = document.getElementById(cars[i].brand);
+        car.className = "car";
+    }
+}
+
 function mostExpensiveCar() {
+    reset();
     let mostExpensiveCar = cars[0];
     for (let i = 1; i < cars.length; i++) {
         if(mostExpensiveCar < cars[i].price){
-            mostExpensiveCar = cars[i];
+            mostExpensiveCar.price = cars[i];
         }
     }
     let notMostExpensiveCar = [];
@@ -72,6 +80,7 @@ function mostExpensiveCar() {
 }
 
 function cheapestCar() {
+    reset();
     let cheapestCar = cars[0];
     for (let i = 1; i < cars.length; i++) {
         if(cheapestCar.price > cars[i].price) {
@@ -113,6 +122,7 @@ function pricesLessThan() {
         }
     }
 }
+
 
 
 

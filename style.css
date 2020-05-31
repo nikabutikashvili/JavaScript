@@ -12,6 +12,11 @@ body {
     font-family: "ArchyEDT-Thin", sans-serif;
     margin: 0;
 }
+a {
+    color: inherit;
+    outline: inherit;
+    text-decoration: inherit;
+}
 
 .container {
     display: flex;
@@ -156,7 +161,43 @@ footer {
 .hide {
     display: none;
 }
+.visible {
+    display: inline;
+}
 .car-title {
     text-align: center;
     font-size: 1.2rem;
+}
+.form-section {
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2em;
+    width: 30%;
+    height: 50%;
+}
+.form-section>h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+.form-action {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.form-action>input, .form-action>button, .pass>input, .pass>i {
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: 40px;
+}
+.pass>input {
+    width: 365px;
+}
+i {
+    cursor: pointer;
+    height: 15px;
+    margin-left: -30px;
+}
+i >img {
+    width: 10px;
 }
