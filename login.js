@@ -38,10 +38,10 @@ function checkUsernameAndPassword(possibleUsername, possiblePassword) {
         if(possiblePassword === user.password) {
             if(user.password.length < 8) {
                 alert("შეხვედით სისტემაში წარმატებით, თუმცა გთხოვთ შეცვალოთ პაროლი");
-                window.location.href = "index.html";
+                window.location = "index.html";
             } else {
                 alert("შეხვედით სისტემაში წარმატებით");
-                window.location.href = "index.html";
+                window.location = "index.html";
             }
         } else {
             alert("პაროლი არასწორია");
