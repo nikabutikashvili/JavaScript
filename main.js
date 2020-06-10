@@ -1,38 +1,17 @@
-let car1 = {
-    brand: "BMW",
-    color: "Grey",
-    model: "M5",
-    year: 2015,
-    horsepower: 200,
-    price: 30000
-};
-
-let car2 = {
-    brand: "Mercedes",
-    color: "Golden",
-    model: "CLS",
-    year: 2020,
-    horsepower: 190,
-    price: 32000
+class Car {
+    constructor(brand, color, model, year, horsepower, price) {
+        this.brand = brand;
+        this.color = color;
+        this.model = model;
+        this.year = year;
+        this.horsepower = horsepower;
+        this.price = price;
+    }
 }
-
-let car3 = {
-    brand: "Honda",
-    color: "Silver",
-    model: "Civic",
-    year: 2007,
-    horsepower: 150,
-    price: 8000
-}; 
-
-let car4 = {
-    brand: "Toyota",
-    color: "Black",
-    model: "Corrola",
-    year: 2012,
-    horsepower: 130,
-    price: 12000
-};
+let car1 = new Car("BMW", "Grey", "M5", 2015, 200, 30000 );
+let car2 = new Car("Mercedes", "Golden", "CLS", 2020, 190, 32000 );
+let car3 = new Car("Honda", "Silver", "Civic", 2007, 150, 8000 );
+let car4 = new Car("Toyota", "Black", "Corrola", 2012, 130, 12000 );
 
 cars = [car1, car2, car3, car4];
 function details(carIndex) {

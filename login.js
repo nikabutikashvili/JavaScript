@@ -1,26 +1,16 @@
-user1 = {
-    email: "John2233@mail.com",
-    password: "1234"
-};
-user2 = {
-    email: "Bob443@yahoo.com",
-    password: "2356"
-};
-user3 = {
-    email: "Jack665@mail.com",
-    password: "7788"
-};
-user4 = {
-    email: "Kate776@email.com",
-    password: "Geolab12#$"
-};
-user5 = {
-    email: "Nick887@mail.com",
-    password: "6644"
-};
+class User {
+    constructor(email, password) {
+        this.email = email;
+        this.password = password;
+    }
+}
+let user1 = new User("John2233@mail.com","1234" );
+let user2 = new User("Bob443@yahoo.com", "2356");
+let user3 = new User("Kate776@email.com","Geolab12#$");
+let user4 = new User("Jack665@mail.com", "7788");
+let user5 = new User("Nick887@mail.com", "6644");
 
 users = [user1, user2, user3, user4, user5];
-
 
 function checkEmailAndPassword(possibleEmail, possiblePassword) {
     let user = {
