@@ -29,34 +29,34 @@
             <form class="displayCar" action="">
                 <label for="text" class="search">გთხოვთ, შეიყვანეთ მანქანის სასურველი ფასი: </label>
                 <input type="text" name="" id="preferredPrice" class="search-btn">
-                <input type="button" onclick="pricesLessThan()" value="ძებნა" class="search-btn action">
+                <input type="button" value="ძებნა" class="search-btn action" id="searchCar">
             </form>
         </div>
         <div class="statistics">
-            <button onclick="averagePrice()">საშუალო ფასი</button>
-            <button onclick="mostExpensiveCar()">ყველაზე ძვირიანი მანქანა</button>
-            <button onclick="cheapestCar()">ყველაზე იაფიანი მანქანა</button>
+            <button id="avg">საშუალო ფასი</button>
+            <button id="mostExpensive">ყველაზე ძვირიანი მანქანა</button>
+            <button id="cheapest">ყველაზე იაფიანი მანქანა</button>
         </div>
         <section>
-            <div class="catalog">
+            <div class="catalog" id="catalogue">
                 <div class="car" id="BMW">
                     <p class="car-title"></p>
-                    <button class="img-btn" id="0" onclick="details(this.id)"><img src="images/bmw.jpg" alt=""></button>
+                    <button class="img-btn"><img id="0" src="images/bmw.jpg" alt=""></button>
                     <button class="buy-btn">ყიდვა</button>
                 </div>
                 <div class="car" id="Mercedes">
                     <p class="car-title"></p>
-                    <button class="img-btn" id="1" onclick="details(this.id)"><img src="images/mer.jpg" alt=""></button>
+                    <button class="img-btn"><img id="1" src="images/mer.jpg" alt=""></button>
                     <button class="buy-btn">ყიდვა</button>
                 </div>
                 <div class="car" id="Honda">
                     <p class="car-title"></p>
-                    <button class="img-btn" id="2" onclick="details(this.id)"><img src="images/honda.jpg" alt=""></button>
+                    <button class="img-btn"><img id="2" src="images/honda.jpg" alt=""></button>
                     <button class="buy-btn">ყიდვა</button>
                 </div>
                 <div class="car" id="Toyota">
                     <p class="car-title"></p>
-                    <button class="img-btn" id="3" onclick="details(this.id)"><img src="images/corolla.jpg" alt=""></button>
+                    <button class="img-btn"><img id="3" src="images/corolla.jpg" alt=""></button>
                     <button class="buy-btn">ყიდვა</button>
                 </div>
             </div>
@@ -65,6 +65,6 @@
             <p class="foot">Geolab 2020</p>
         </footer>
     </div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
