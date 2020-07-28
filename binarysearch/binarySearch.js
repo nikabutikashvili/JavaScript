@@ -3,16 +3,15 @@ function binarySearch(number, array) {
     let startIndex = 0;
     let endIndex = array.length - 1;
     while(endIndex >= startIndex) {
-        let middleIndex = Math.floor(startIndex + ((endIndex - startIndex)/2));
+        let middleIndex = Math.floor(startIndex + (endIndex - startIndex)/2);
         if(array[middleIndex] === number) {
             return middleIndex;
-        } else if(middleIndex < number) {
-            startIndex = middleIndex + 1;
-        } else {
+        } else if(number < middleIndex) {
             endIndex = middleIndex - 1;
+        } else {
+            startIndex = middleIndex + 1;
         }
     }
     return -1;
 }
-
-console.log(binarySearch(8, array));
+console.log(binarySearch(55, array));
